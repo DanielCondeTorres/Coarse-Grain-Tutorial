@@ -6,3 +6,9 @@ This is a short tutorial on how to perform a peptide-membrane interaction simula
 </p>
 
 # Getting started
+The first step is to create our simulation box, which will have the following study system:
+
+-Membrane simulating that of a healthy mammal: (100% POPC).
+-Magainin-2 ETP
+
+The membrane can be created directly with the free software Charmm-gui, all you need to do is register.
