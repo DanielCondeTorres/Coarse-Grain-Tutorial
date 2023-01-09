@@ -15,14 +15,16 @@ The membrane can be created directly with the free software [Charmm-gui](https:/
 
 Magainin-2 will obtain its atomistic representation from the [Protein Data Bank](https://www.rcsb.org/structure/2MAG), if someone is lost, you can get the pdb directly from this repository.
 # Load modules that are needed to run and visualize the simulation
-In order to use Gromacs package 
+In order to use [Gromacs package](https://www.gromacs.org/) 
 
 ```
 module load gcc/system openmpi/4.0.5 gromacs/2021-PLUMED-2.7.1 mdanalysis/1.1.1
 ```
-and in order to visualize the systems:
+and in order to visualize the systems we will use [VMD](https://www.ks.uiuc.edu/Research/vmd/):
 
 ```
 module load vmd
 ```
 # Atomistic to Coarse-Grain resolution
+
+In this case the representation to be used will be Coarse-Grained, where instead of representing all the atoms in an explicit way we group them in a structure called 'bead' that groups four of these atoms. This way we reduce the number of particles in the system and we can perform computational simulations of larger systems because the computational cost is lower.
