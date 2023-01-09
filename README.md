@@ -58,3 +58,16 @@ Martini system from 2mag(3).pdb
 ; name        number
 Protein_A        1
  ```
+ 1. "martini.itp": parameters and equations that describes our forcefield
+ 2. "Protein_A.itp": angles, distances, dihedrals... parameters that define our particle 
+ 
+ 
+ 
+# Insert the molecule in the membrane-water box
+In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
+
+```
+gmx insert-molecules -f membrana.pdb -ci MAG_CG.pdb -nmol 1 -replace W
+
+```
+
