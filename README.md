@@ -35,4 +35,13 @@ To begin with we will use the [Martini] (http://www.cgmartini.nl/force) field, a
 ```
 python3 martinize.py -f 2mag(3).pdb -ss HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -x MAG_CG.pdb -o topol.top -merge all
 ```
-- -ss indicates the secondary structure that we want, in this casa \alpha helix 
+- -ss indicates the secondary structure that we want, in this casa α-helix
+1.  "F": "Collagenous Fiber",                                                                 
+2.  "E": "Extended structure (beta sheet)",                                                    
+3.  "H": "Helix structure",                                                                    
+4.  "1": "Helix start (H-bond donor)",                                                         
+5.  "2": "Helix end (H-bond acceptor)",                                                        
+6.  "3": "Ambivalent helix type (short helices)",                                              
+7.  "T": "Turn",                                                                               
+8.  "S": "Bend",                                                                               
+9.  "C": "Coil", 
