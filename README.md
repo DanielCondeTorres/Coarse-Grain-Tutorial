@@ -83,12 +83,12 @@ gmx insert-molecules -f membrana.pdb -ci MAG_CG.pdb -nmol 1 -replace W -o comple
 gmx grompp -f ions.mdp -c complete_system.gro -p topol.top -o ions.tpr
 ```
 
-# Minimization
 
 ```
 gmx genion -s ions.tpr -p topol.top -pname NA -nname CL -neutral -o complete_system_ions.gro 
 ```
 
+# Minimization
 
 ```
 gmx grompp -f minim.mdp -c -o complete_system_ions.gro  -p topol.top -o minimize.tpr
