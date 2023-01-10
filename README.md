@@ -33,7 +33,7 @@ To begin with we will use the [Martini] (http://www.cgmartini.nl/force) field, a
 
 
 ```
-python3 martinize.py -f 2mag.pdb -ss HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -x MAG_CG.pdb -o topol.top -merge all
+python2 martinize.py -f 2mag.pdb -ss HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -x MAG_CG.pdb -o topol.top -merge all
 ```
 - -ss: indicates the secondary structure that we want, in this casa α-helix
 1.  "F": "Collagenous Fiber",                                                                 
@@ -75,23 +75,32 @@ Where the option 'scale 4' allows us not to add the water inside the membrane, b
 In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
 
 ```
-gmx insert-molecules -f membrana.pdb -ci MAG_CG.pdb -nmol 1 -replace W -o complete_system.gro
+gmx insert-molecules -f membrana_bacteria_a_usar.pdb -ci MAG_CG.pdb -nmol 1 -replace W -o complete_system.pdb
+```
+
+```
+python number_of_waters.py -f complete_system.pdb
 ```
 
 # Add ions
 ```
-gmx grompp -f ions.mdp -c complete_system.gro -p topol.top -o ions.tpr
+gmx grompp -f ions.mdp -c complete_system.pdb -p system.top -o ions.tpr
 ```
 
 
 ```
-gmx genion -s ions.tpr -p topol.top -pname NA -nname CL -neutral -o complete_system_ions.gro 
+gmx genion -s ions.tpr -p system.top -pname NA -nname CL -neutral -o complete_system_ions.gro 
 ```
+Select:
+```
+Group 4: W
+```
+
 
 # Minimization
 
 ```
-gmx grompp -f minim.mdp -c -o complete_system_ions.gro  -p topol.top -o minimize.tpr
+gmx grompp -f minimization.mdp -c complete_system_ions.gro  -p system.top -o minimize.tpr -maxwarn 1
 ```
 
 
@@ -104,11 +113,24 @@ gmx mdrun -v -deffnm minimize
 ```
 gmx make_ndx -f minimize.gro -o index.ndx
 ```
+POPE and POPG
+```
+2|3
+```
+```
+name 17 Membrane
+```
+```
+4|5
+```
+```
+name 18 Water_and_ions
+```
 
 # Equilibration
 
 ```
-gmx grompp -f equilibration.mdp -c minimize.gro -r minimize.gro -p topol.top -o equilibrate.tpr
+gmx grompp -f equilibration.mdp -c minimize.gro -r minimize.gro -p system.top -o equilibrate.tpr -n index -maxwarn 1
 ```
 
 ```
