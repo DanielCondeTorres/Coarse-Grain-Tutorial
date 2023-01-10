@@ -1,0 +1,18 @@
+#include "martini_v2.2.itp"
+#include "martini_v2.0_lipids_all_201506.itp"
+#include "martini_v2.0_ions.itp"
+#include "Protein_A.itp"
+
+[ system ]
+; name
+Martini system in water
+
+[ molecules ]
+; name        number
+POPE 25
+POPG 225
+POPE 25
+POPG 225
+W           19829
+NA               438
+Protein_A   4 
