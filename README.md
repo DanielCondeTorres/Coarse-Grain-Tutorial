@@ -101,6 +101,9 @@ gmx mdrun -v -deffnm minimize
 ```
 # Make index
 
+```
+gmx make_ndx -f minimize.gro -o index.ndx
+```
 
 # Equilibration
 
