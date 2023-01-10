@@ -33,7 +33,7 @@ To begin with we will use the [Martini] (http://www.cgmartini.nl/force) field, a
 
 
 ```
-python3 martinize.py -f 2mag(3).pdb -ss HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -x MAG_CG.pdb -o topol.top -merge all
+python3 martinize.py -f 2mag.pdb -ss HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -x MAG_CG.pdb -o topol.top -merge all
 ```
 - -ss: indicates the secondary structure that we want, in this casa α-helix
 1.  "F": "Collagenous Fiber",                                                                 
