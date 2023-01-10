@@ -66,7 +66,6 @@ In case we have the membrane without any type of solvent and we want to add it, 
 
 ```
 gmx solvate -cs water.gro -cp caja_grande.pdb -p system.top -scale 4 -o caja_grande_solv.pdb
-
 ```
 
 Where the option 'scale 4' allows us not to add the water inside the membrane, but some script can be used to eliminate it.
@@ -77,6 +76,7 @@ In this case we want to insert one Magainin in the simulation box (-nmol 1) in t
 
 ```
 gmx insert-molecules -f membrana.pdb -ci MAG_CG.pdb -nmol 1 -replace W
-
 ```
+
+
 
