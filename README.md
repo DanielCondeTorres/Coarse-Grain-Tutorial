@@ -88,7 +88,7 @@ We add the protein, the correc number of waters and the protein itp file
 #include "martini_v2.2.itp"
 #include "martini_v2.0_lipids_all_201506.itp"
 #include "martini_v2.0_ions.itp"
-#include "Protein_A.itp"
+*#include "Protein_A.itp"
 
 [ system ]
 ; name
@@ -100,8 +100,8 @@ POPE 25
 POPG 225
 POPE 25
 POPG 225
-W           **27966**
-Protein_A   1
+*W           27966
+*Protein_A   1
  ```             
 
 
