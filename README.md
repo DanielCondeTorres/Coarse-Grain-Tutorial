@@ -61,8 +61,17 @@ Protein_A        1
  1. "martini.itp": parameters and equations that describes our forcefield
  2. "Protein_A.itp": angles, distances, dihedrals... parameters that define our particle 
  
- 
- 
+#Solvating the membrane
+In case we have the membrane without any type of solvent and we want to add it, it can be used:
+
+```
+gmx solvate -cs water.gro -cp caja_grande.pdb -p system.top -scale 4 -o caja_grande_solv.pdb
+
+```
+
+Where the option 'scale 4' allows us not to add the water inside the membrane, but some script can be used to eliminate it.
+
+
 # Insert the molecule in the membrane-water box
 In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
 
