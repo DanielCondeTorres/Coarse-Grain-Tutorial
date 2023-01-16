@@ -87,7 +87,7 @@ Where the option 'scale 4' allows us not to add the water inside the membrane, b
 In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
 
 ```
-gmx insert-molecules -f membrana_bacteria_a_usar.pdb -ci MAG_CG.pdb -nmol 1 -replace W -o complete_system.pdb
+gmx insert-molecules -f mem_bact_solvate_clean.pdb -ci MAG_CG.pdb -nmol 1 -replace W -o complete_system.pdb
 ```
 
 ```
