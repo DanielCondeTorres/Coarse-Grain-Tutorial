@@ -36,6 +36,8 @@ To begin with we will use the [Martini] (http://www.cgmartini.nl/force) field, a
 ```
 python2 martinize.py -f 2mag.pdb -ss HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH -x MAG_CG.pdb -o topol.top -merge all
 ```
+The number of **H** should be the same (or higher) than the BB residues of our ETP.
+
 - -ss: indicates the secondary structure that we want, in this casa α-helix
 1.  "F": "Collagenous Fiber",                                                                 
 2.  "E": "Extended structure (beta sheet)",                                                    
