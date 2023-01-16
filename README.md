@@ -164,8 +164,8 @@ gmx grompp -f equilibration.mdp -c minimize.gro -r minimize.gro -p system.top -o
 
 ```
 gmx mdrun -v -deffnm equilibrate
-
 ```
+
 # Production
 
 ```
