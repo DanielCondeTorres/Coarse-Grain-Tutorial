@@ -1,7 +1,4 @@
-![mini]()
 
-
-![caja_grande_solv]()
 
 
 # Coarse-Grain-Tutorial
@@ -78,7 +75,7 @@ gmx solvate -cs water.gro -cp caja_grande.pdb -p system.top -scale 4 -o caja_gra
 Where the option 'scale 4' allows us not to add the water inside the membrane, but some script can be used to eliminate it.
 
 <p align="center">
-  <img src="[https://user-images.githubusercontent.com/117435891/212663858-623d8cd4-ced7-4a85-8fe7-a9c33cd82b8d.jpeg](https://user-images.githubusercontent.com/117435891/212669021-89bb1ddd-68c3-499b-b64e-bf4189a1c377.png)" />
+  <img src="https://user-images.githubusercontent.com/117435891/212663858-623d8cd4-ced7-4a85-8fe7-a9c33cd82b8d.jpeg](https://user-images.githubusercontent.com/117435891/212669021-89bb1ddd-68c3-499b-b64e-bf4189a1c377.png" />
 </p>
 
 # Insert the molecule in the membrane-water box
@@ -118,7 +115,7 @@ POPG 225
  ```             
 
 <p align="center">
-  <img src="[https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png)" />
+  <img src="https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png" />
 </p>
 
 # Add ions
