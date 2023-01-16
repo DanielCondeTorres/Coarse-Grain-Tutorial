@@ -22,7 +22,7 @@ Magainin-2 will obtain its atomistic representation from the [Protein Data Bank]
 In order to use [Gromacs package](https://www.gromacs.org/) 
 
 ```
-module load gcc/system openmpi/4.0.5 gromacs/2021-PLUMED-2.7.1 mdanalysis/1.1.1
+module load cesga/2020 gcc/system openmpi/4.0.5_ft3 gromacs/2021.5
 ```
 and in order to visualize the systems we will use [VMD](https://www.ks.uiuc.edu/Research/vmd/):
 
@@ -74,10 +74,13 @@ gmx solvate -cs water.gro -cp caja_grande.pdb -p system.top -scale 4 -o caja_gra
 
 Where the option 'scale 4' allows us not to add the water inside the membrane, but some script can be used to eliminate it.
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/212669021-89bb1ddd-68c3-499b-b64e-bf4189a1c377.png" />
-</p>
 
+
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png" />
+</p>
 # Insert the molecule in the membrane-water box
 In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
 
@@ -115,7 +118,7 @@ POPG 225
  ```             
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png" />
+  <img src="https://user-images.githubusercontent.com/117435891/212669021-89bb1ddd-68c3-499b-b64e-bf4189a1c377.png" />
 </p>
 
 # Add ions
