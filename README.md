@@ -119,7 +119,7 @@ POPE 25
 POPG 225
 POPE 25
 POPG 225
-*W           27966
+*W           27951
 *Protein_A   1
  ```             
 
