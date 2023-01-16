@@ -95,8 +95,12 @@ python number_of_waters.py -f complete_system.pdb
 ```
 We add the protein, the correc number of waters and the protein itp file
 
+you can also use this comand line
 
 
+```
+grep -c W complete_system.pdb
+```
 
 
 ```
@@ -123,6 +127,8 @@ POPG 225
   <img src="https://user-images.githubusercontent.com/117435891/212669021-89bb1ddd-68c3-499b-b64e-bf4189a1c377.png" />
 </p>
 
+ * means things that we need to modify in system.top
+
 # Add ions
 
  *Since life does not exist at a net charge, we must add ions to our system.* **See references**
@@ -141,7 +147,7 @@ Select:
 ```
 Group 4: W
 ```
-**W** meand Water
+**W** means Water
 
 # Minimization
 
