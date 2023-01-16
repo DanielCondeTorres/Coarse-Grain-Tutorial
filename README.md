@@ -1,3 +1,9 @@
+![mini]()
+
+
+![caja_grande_solv]()
+
+
 # Coarse-Grain-Tutorial
 This is a short tutorial on how to perform a peptide-membrane interaction simulation using the Martini force field, together with the Gromacs package.
 
@@ -72,7 +78,7 @@ gmx solvate -cs water.gro -cp caja_grande.pdb -p system.top -scale 4 -o caja_gra
 Where the option 'scale 4' allows us not to add the water inside the membrane, but some script can be used to eliminate it.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/212663858-623d8cd4-ced7-4a85-8fe7-a9c33cd82b8d.jpeg" />
+  <img src="[https://user-images.githubusercontent.com/117435891/212663858-623d8cd4-ced7-4a85-8fe7-a9c33cd82b8d.jpeg](https://user-images.githubusercontent.com/117435891/212669021-89bb1ddd-68c3-499b-b64e-bf4189a1c377.png)" />
 </p>
 
 # Insert the molecule in the membrane-water box
@@ -111,6 +117,9 @@ POPG 225
 *Protein_A   1
  ```             
 
+<p align="center">
+  <img src="[https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png)" />
+</p>
 
 # Add ions
 ```
@@ -128,6 +137,9 @@ Group 4: W
 
 
 # Minimization
+
+*The purpose of minimization, or relaxation, is to find a local energy minimum of the starting structure so that the molecular dynamics simulation does not immediately “blow up” (i.e. the forces on any one atom are not so large that the atoms move an unreasonable distance in a single timestep). This involves standard minimization algorithms such as steepest descent.* **See references**
+
 
 ```
 gmx grompp -f minimization.mdp -c complete_system_ions.gro  -p system.top -o minimize.tpr -maxwarn 1
@@ -155,6 +167,10 @@ name 18 Water_and_ions
 ```
 
 # Equilibration
+
+*Ultimately, we usually seek to run a simulation in a particular thermodynamic ensemble (e.g. the NVE or NVT ensemble) at a particular state point (e.g. target energy, temperature, and pressure) and collect data for analysis which is appropriate for those conditions and not biased depending on our starting conditions/configuration. This means that usually we need to invest simulation time in bringing the system to the appropriate state point as well as relaxing away from any artificially induced metastable starting states. In other words, we are usually interested in sampling the most relevant (or most probable) configurations in the equilibrium ensemble of interest. However, if we start in a less-stable configuration a large part of our equilibration may be the relaxation time (this may be very long for biomolecules or systems at phase equilibrium) necessary to reach the more relevant configuration space.*
+**See references**
+
 
 ```
 gmx grompp -f equilibration.mdp -c minimize.gro -r minimize.gro -p system.top -o equilibrate.tpr -n index -maxwarn 1
@@ -190,3 +206,6 @@ sbatch prod.sh
 
 [Braun E, Gilmer J, Mayes HB, Mobley DL, Monroe JI, Prasad S, Zuckerman DM. Best Practices for Foundations in Molecular Simulations [Article v1.0]. Living J Comput Mol Sci. 2019;1(1):5957. doi: 10.33011/livecoms.1.1.5957. Epub 2018 Nov 29. PMID: 31788666; PMCID: PMC6884151](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884151/)
 
+# Importance of colors to make plots for everybody
+
+[ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=GnBu&n=5)
