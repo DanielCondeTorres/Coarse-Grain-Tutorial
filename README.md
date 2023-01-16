@@ -133,11 +133,13 @@ gmx grompp -f ions.mdp -c complete_system.pdb -p system.top -o ions.tpr
 ```
 gmx genion -s ions.tpr -p system.top -pname NA -nname CL -neutral -o complete_system_ions.gro 
 ```
+We are going to replace the water molecules in order to add the ions
+
 Select:
 ```
 Group 4: W
 ```
-
+**W** meand Water
 
 # Minimization
 
@@ -155,6 +157,8 @@ gmx mdrun -v -deffnm minimize
 ```
 
 # Make index
+
+We need to create these groups in order to run the .mdp files, because it is going to apply some condictions to the membrane, water, ions and the ETP. When you create the pdbs, you haven't got these groups (you have Cl, Na, POPC ...) but not membrane, ions, etc.
 
 ```
 gmx make_ndx -f minimize.gro -o index.ndx
