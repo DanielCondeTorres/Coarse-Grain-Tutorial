@@ -71,6 +71,9 @@ gmx solvate -cs water.gro -cp caja_grande.pdb -p system.top -scale 4 -o caja_gra
 
 Where the option 'scale 4' allows us not to add the water inside the membrane, but some script can be used to eliminate it.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/212663858-623d8cd4-ced7-4a85-8fe7-a9c33cd82b8d.jpeg" />
+</p>
 
 # Insert the molecule in the membrane-water box
 In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
@@ -85,9 +88,7 @@ python number_of_waters.py -f complete_system.pdb
 We add the protein, the correc number of waters and the protein itp file
 
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/212663858-623d8cd4-ced7-4a85-8fe7-a9c33cd82b8d.jpeg" />
-</p>
+
 
 
 ```
@@ -185,3 +186,7 @@ srun gmx_mpi mdrun -pin on -cpi -noappend -s prod.tpr
 ```
 sbatch prod.sh
 ```
+
+# References to start with MD simulations
+[Braun E, Gilmer J, Mayes HB, Mobley DL, Monroe JI, Prasad S, Zuckerman DM. Best Practices for Foundations in Molecular Simulations [Article v1.0]. Living J Comput Mol Sci. 2019;1(1):5957. doi: 10.33011/livecoms.1.1.5957. Epub 2018 Nov 29. PMID: 31788666; PMCID: PMC6884151](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884151/)
+
