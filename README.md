@@ -115,6 +115,7 @@ POPG 225
 # Add ions
 ```
 gmx grompp -f ions.mdp -c complete_system.pdb -p system.top -o ions.tpr
+```
 
 
 ```
