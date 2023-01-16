@@ -1,7 +1,7 @@
+#  Training school from eCOST. 
 
 
-
-# Coarse-Grain-Tutorial
+# Coarse-Grain Tutorial
 This is a short tutorial on how to perform a peptide-membrane interaction simulation using the Martini force field, together with the Gromacs package.
 
 <p align="center">
@@ -9,7 +9,7 @@ This is a short tutorial on how to perform a peptide-membrane interaction simula
 </p>
 
 
-# Getting started
+## Getting started
 The first step is to create our simulation box, which will have the following study system:
 
 - Membrane simulating: bacteria (90% POPG and 10% POPE).
