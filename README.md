@@ -85,7 +85,7 @@ We add the protein, the correc number of waters and the protein itp file
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/199971517-f9f27119-0f85-4f91-8f05-e9b48a32f27c.png" />
+  <img src="https://user-images.githubusercontent.com/117435891/212663660-400fc369-2f47-49a5-9a92-1a8014c11707.jpeg" />
 </p>
 
 
@@ -113,7 +113,6 @@ POPG 225
 # Add ions
 ```
 gmx grompp -f ions.mdp -c complete_system.pdb -p system.top -o ions.tpr
-```
 
 
 ```
