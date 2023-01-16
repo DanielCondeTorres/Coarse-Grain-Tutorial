@@ -84,6 +84,11 @@ python number_of_waters.py -f complete_system.pdb
 We add the protein, the correc number of waters and the protein itp file
 
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/199971517-f9f27119-0f85-4f91-8f05-e9b48a32f27c.png" />
+</p>
+
+
 ```
 #include "martini_v2.2.itp"
 #include "martini_v2.0_lipids_all_201506.itp"
