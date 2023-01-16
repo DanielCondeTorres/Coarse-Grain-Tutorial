@@ -81,7 +81,9 @@ Where the option 'scale 4' allows us not to add the water inside the membrane, b
 <p align="center">
   <img src="https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png" />
 </p>
+
 # Insert the molecule in the membrane-water box
+
 In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
 
 ```
@@ -122,6 +124,7 @@ POPG 225
 </p>
 
 # Add ions
+
 ```
 gmx grompp -f ions.mdp -c complete_system.pdb -p system.top -o ions.tpr
 ```
