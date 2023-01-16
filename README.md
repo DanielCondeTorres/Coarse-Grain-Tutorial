@@ -1,7 +1,4 @@
-#  Training school from eCOST. 
-
-
-# Coarse-Grain Tutorial
+#  Training school from eCOST: Coarse-Grain Tutorial
 This is a short tutorial on how to perform a peptide-membrane interaction simulation using the Martini force field, together with the Gromacs package.
 
 <p align="center">
@@ -29,7 +26,7 @@ and in order to visualize the systems we will use [VMD](https://www.ks.uiuc.edu/
 ```
 module load vmd
 ```
-# Atomistic to Coarse-Grain resolution
+## Atomistic to Coarse-Grain resolution
 
 In this case the representation to be used will be Coarse-Grained, where instead of representing all the atoms in an explicit way we group them in a structure called 'bead' that groups four of these atoms. This way we reduce the number of particles in the system and we can perform computational simulations of larger systems because the computational cost is lower.
 
@@ -82,7 +79,7 @@ Where the option 'scale 4' allows us not to add the water inside the membrane, b
   <img src="https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png" />
 </p>
 
-# Insert the molecule in the membrane-water box
+## Insert the molecule in the membrane-water box
 
 In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
 
@@ -129,7 +126,7 @@ POPG 225
 
  * means things that we need to modify in system.top
 
-# Add ions
+## Add ions
 
  *Since life does not exist at a net charge, we must add ions to our system.* **See references**
 
@@ -149,7 +146,7 @@ Group 4: W
 ```
 **W** means Water
 
-# Minimization
+## Minimization
 
 *The purpose of minimization, or relaxation, is to find a local energy minimum of the starting structure so that the molecular dynamics simulation does not immediately “blow up” (i.e. the forces on any one atom are not so large that the atoms move an unreasonable distance in a single timestep). This involves standard minimization algorithms such as steepest descent.* **See references**
 
@@ -164,7 +161,7 @@ gmx grompp -f minimization.mdp -c complete_system_ions.gro  -p system.top -o min
 gmx mdrun -v -deffnm minimize
 ```
 
-# Make index
+## Make index
 
 We need to create these groups in order to run the .mdp files, because it is going to apply some condictions to the membrane, water, ions and the ETP. When you create the pdbs, you haven't got these groups (you have Cl, Na, POPC ...) but not membrane, ions, etc.
 
@@ -181,7 +178,7 @@ name 17 Membrane
 name 18 Water_and_ions
 ```
 
-# Equilibration
+## Equilibration
 
 *Ultimately, we usually seek to run a simulation in a particular thermodynamic ensemble (e.g. the NVE or NVT ensemble) at a particular state point (e.g. target energy, temperature, and pressure) and collect data for analysis which is appropriate for those conditions and not biased depending on our starting conditions/configuration. This means that usually we need to invest simulation time in bringing the system to the appropriate state point as well as relaxing away from any artificially induced metastable starting states. In other words, we are usually interested in sampling the most relevant (or most probable) configurations in the equilibrium ensemble of interest. However, if we start in a less-stable configuration a large part of our equilibration may be the relaxation time (this may be very long for biomolecules or systems at phase equilibrium) necessary to reach the more relevant configuration space.*
 **See references**
@@ -217,12 +214,17 @@ sbatch prod.sh
 ```
 
 
-# References to start with MD simulations
+## References to start with MD simulations
 
 [Braun E, Gilmer J, Mayes HB, Mobley DL, Monroe JI, Prasad S, Zuckerman DM. Best Practices for Foundations in Molecular Simulations [Article v1.0]. Living J Comput Mol Sci. 2019;1(1):5957. doi: 10.33011/livecoms.1.1.5957. Epub 2018 Nov 29. PMID: 31788666; PMCID: PMC6884151](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884151/)
 
 [Gromacs Tutorial](http://www.mdtutorials.com/gmx/lysozyme/01_pdb2gmx.html)
 
-# Importance of colors to make plots for everybody
+## Importance of colors to make plots for everybody
 
 [ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=GnBu&n=5)
+
+## Acknowledgments
+To **eCOST Action CA21145 EURESTOP
+European Network for diagnosis and treatment of antibiotic-resistant
+bacterial infections** for counting on us to give this class.
