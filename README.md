@@ -137,22 +137,19 @@ gmx grompp -f minimization.mdp -c complete_system_ions.gro  -p system.top -o min
 ```
 gmx mdrun -v -deffnm minimize
 ```
+
 # Make index
 
 ```
 gmx make_ndx -f minimize.gro -o index.ndx
 ```
+
 POPE and POPG
+
 ```
 2|3
-```
-```
 name 17 Membrane
-```
-```
 4|5
-```
-```
 name 18 Water_and_ions
 ```
 
