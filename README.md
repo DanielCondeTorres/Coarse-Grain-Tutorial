@@ -187,6 +187,8 @@ srun gmx_mpi mdrun -pin on -cpi -noappend -s prod.tpr
 sbatch prod.sh
 ```
 
+
 # References to start with MD simulations
+
 [Braun E, Gilmer J, Mayes HB, Mobley DL, Monroe JI, Prasad S, Zuckerman DM. Best Practices for Foundations in Molecular Simulations [Article v1.0]. Living J Comput Mol Sci. 2019;1(1):5957. doi: 10.33011/livecoms.1.1.5957. Epub 2018 Nov 29. PMID: 31788666; PMCID: PMC6884151](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884151/)
 
