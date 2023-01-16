@@ -15,7 +15,7 @@ The first step is to create our simulation box, which will have the following st
 The membrane can be created directly with the free software [Charmm-gui](https://www.charmm-gui.org/), all you need to do is register. However, to save time I have moved the work forward and we will be able to download it directly from this repository at the following link:
 
 Magainin-2 will obtain its atomistic representation from the [Protein Data Bank](https://www.rcsb.org/structure/2MAG), if someone is lost, you can get the pdb directly from this repository.
-# Load modules that are needed to run and visualize the simulation
+## Load modules that are needed to run and visualize the simulation
 In order to use [Gromacs package](https://www.gromacs.org/) 
 
 ```
