@@ -5,6 +5,7 @@ This is a short tutorial on how to perform a peptide-membrane interaction simula
   <img src="https://user-images.githubusercontent.com/117435891/199940424-2ad7347e-bbcb-4425-bfc6-bb7a3fca7413.gif" alt="animated"  />
 </p>
 
+
 # Getting started
 The first step is to create our simulation box, which will have the following study system:
 
@@ -85,7 +86,7 @@ We add the protein, the correc number of waters and the protein itp file
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/212663660-400fc369-2f47-49a5-9a92-1a8014c11707.jpeg" />
+  <img src="https://user-images.githubusercontent.com/117435891/212663858-623d8cd4-ced7-4a85-8fe7-a9c33cd82b8d.jpeg" />
 </p>
 
 
