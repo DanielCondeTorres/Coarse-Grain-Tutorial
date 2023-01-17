@@ -37,11 +37,34 @@ phenomena: *The time average of a magnitude equals the average of that magnitude
 
 ### Limitations of classical Molecular Dynamics simulations
 
-### PBC
+- Validity of classical forces and equations if typical distance between particles  is bigger than the De Broglie wavelength
+- Validity if intermolecular interactions?
+- Limited timescales reachable by current computational capabilities
+- Limited size of system by current computational capabilities
+- Ergodicity: is the simulated system exploring a relevant fraction of phase space?
+
+### Periodic boundary conditions (Born, von Karman (1912), PBC)
+
+To mimic realistic conditions (experiment), in simulations we usually want to describe bulk properties of substances; however, 
+due to limited computational power, there is limit in number of particles we can simulate; if walls, a large proportion will be affected by their presence
+
+- No walls, reduces surface effects
+- Number density conserved
+- Size of simulated box L large compared with potential range
+- Suppress long wavelength fluctuations
+- Topology of a torus
+
+
+#### Properties
+- Atoms that leave the simulation region at one boundary reenter the region through the opposite face
+- Atoms interact with real and image atoms
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/117435891/212854665-5beaa3aa-bf63-4aa2-9240-f9996f497ffe.gif" alt="animated"  />
 </p>
+
+### What is a forcefield?
+It is nothing more than a set of parameters and equations that defines the interactions between the particles of our system, based on Newton's second law
 
 ## Getting started: Simulation
 The first step is to create our simulation box, which will have the following study system:
