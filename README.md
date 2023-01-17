@@ -247,10 +247,11 @@ For the analysis will be also useful have the backbone
 
 
 ```
+a 6029
 a BB
 q
 ```
-
+Where BB is the Backbone of the Protein and 6029 is a unique water molecule, they will be used to calculate the Radial Distribution Function.
 ### Equilibration
 
 *Ultimately, we usually seek to run a simulation in a particular thermodynamic ensemble (e.g. the NVE or NVT ensemble) at a particular state point (e.g. target energy, temperature, and pressure) and collect data for analysis which is appropriate for those conditions and not biased depending on our starting conditions/configuration. This means that usually we need to invest simulation time in bringing the system to the appropriate state point as well as relaxing away from any artificially induced metastable starting states. In other words, we are usually interested in sampling the most relevant (or most probable) configurations in the equilibrium ensemble of interest. However, if we start in a less-stable configuration a large part of our equilibration may be the relaxation time (this may be very long for biomolecules or systems at phase equilibrium) necessary to reach the more relevant configuration space.*
@@ -295,6 +296,53 @@ sbatch prod.sh
 </p>
 
 ### Analysis
+
+
+
+#### Density profiles
+
+```
+gmx density -f trajectory_skip100.xtc -s prod.tpr -n index.ndx -center -symm -ng 3 -o density_skip.xvg
+Select Membrane to center the representation
+Select Protein
+Select Membrane
+Select Water_and_ions
+xmgrace -nxy  density_skip.xvg
+```
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/212896743-49c7ca61-d036-46c0-8837-fcbee7a87ccb.jpeg" />
+</p>
+
+
+#### Number of contacts
+
+```
+gmx mindist -s prod.tpr -f trajectory_skip100.xtc -on num_contacts_skip.xvg -tu ns -d 0.6 -n index.ndx
+Select BB
+Select Membrane
+xmgrace -nxy  num_contacts_skip.xvg
+```
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/212896881-5be89031-076a-43d9-a50b-07bf0c62ec41.jpeg" />
+</p>
+
+#### Radial distribution function
+
+
+```
+gmx rdf -f trajectory_skip100.xtc -s prod.tpr -o RDF_water.xvg -n index.ndx -tu ns
+Select 6029
+Select W 
+xmgrace -nxy  RDF_water.xvg
+```
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/212896892-f0809dfb-aa93-484f-ba9f-f9ee2bb9a7d8.jpeg" />
+</p>
+
 
 [Gromac analysis](https://manual.gromacs.org/documentation/2019/reference-manual/analysis.html)  [MDAnalysis](https://www.mdanalysis.org/)
 
