@@ -313,6 +313,8 @@ Where BB is the Backbone of the Protein and 6029 is a unique water molecule, the
 
 #### Density profiles
 
+
+
 ```
 gmx density -f trajectory_skip100.xtc -s prod.tpr -n index.ndx -center -symm -ng 3 -o density_skip.xvg
 Select Membrane to center the representation
