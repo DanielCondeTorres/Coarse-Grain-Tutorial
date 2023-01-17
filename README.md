@@ -292,7 +292,7 @@ sbatch prod.sh
 
 #### .mdp files
 
-During the creation of the system, we have used at different points files known as . mdp files, these allow us for example which type of algorithms we want to use to find the minimum, during minimisation (such as steepest descent), which type of ensemble production to work on, such as the NVE, NVT or NPT, thus choosing the thermostat, barostat, reference temperatures, the integrator to use to solve the equations of motion, the time step (how often we 'integrate' the equations of motion) or the method to calculate the long range electrostatics such as Ewald, the time step (how often we 'integrate' the equations of motion) or the method to calculate the Long range electrostatics such as Ewald Summation, PME or Reaction-Field, add constraints to the motion of our particles, perform Umbrella-Sampling simulations or how often we check-point our simulation.
+During the creation of the system, we have used at different points files known as **.mdp files**, these allow us for example which type of algorithms we want to use to find the minimum, during minimisation (such as steepest descent), which type of ensemble production to work on, such as the NVE, NVT or NPT, thus choosing the thermostat, barostat, reference temperatures, the integrator to use to solve the equations of motion, the time step (how often we 'integrate' the equations of motion) or the method to calculate the long range electrostatics such as Ewald, the time step (how often we 'integrate' the equations of motion) or the method to calculate the Long range electrostatics such as Ewald Summation, PME or Reaction-Field, add constraints to the motion of our particles, perform Umbrella-Sampling simulations or how often we check-point our simulation.
 
 
 ### Analysis
@@ -375,6 +375,7 @@ To **eCOST Action CA21145 EURESTOP European Network for diagnosis and treatment 
 
 To **Cesga**, for allowing us the use of their facilities to hold this seminar.
 
+This work has received financial support from the Spanish Agencia Estatal de Investigación (AEI) and the European Regional Development Fund - ERDF (RTI2018-098795-A-I00, PID2019-111327GB-I00, PDC2022-133402-I00 and RYC-2016-20335), by the Xunta de Galicia (ED431B 2022/36, ED431F 2020/05, 06_IN606D_2021_2600276, 02_IN606D_2022_2667887, ED481A 2022/290 and Centro singular de investigación de Galicia accreditation 2019-2022, ED431G 2019/03) and the European Union (ERDF) and by the COST Action CA21145.
 
 ## Team
 
