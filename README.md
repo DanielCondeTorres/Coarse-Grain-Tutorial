@@ -360,9 +360,11 @@ xmgrace -nxy  RDF_water.xvg
 [ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=GnBu&n=5)
 
 ## Acknowledgments
-To **eCOST Action CA21145 EURESTOP
-European Network for diagnosis and treatment of antibiotic-resistant
-bacterial infections** for counting on us to give this class.
+
+To **eCOST Action CA21145 EURESTOP European Network for diagnosis and treatment of antibiotic-resistant bacterial infections** for counting on us to give this class.
+
+To **Cesga**, for allowing us the use of their facilities to hold this seminar.
+
 
 ## Team
 
