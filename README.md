@@ -309,7 +309,7 @@ a BB
 q
 ```
 
-Where BB is the Backbone of the Protein and 6029 is a unique water molecule, they will be used to calculate the number of contacts and the Radial Distribution Function, respectively.
+Where BB is the Backbone of the Protein and 6029 is an unique water molecule, they will be used to calculate the number of contacts and the Radial Distribution Function, respectively.
 
 #### Density profiles
 
