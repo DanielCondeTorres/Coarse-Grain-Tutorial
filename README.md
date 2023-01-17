@@ -156,7 +156,7 @@ gmx insert-molecules -f mem_bact_solvate_clean.pdb -ci MAG_CG.pdb -nmol 1 -repla
 ```
 python number_of_waters.py -f complete_system.pdb
 ```
-We add the protein, the correc number of waters and the protein itp file
+We add the protein, the correct number of waters and the protein itp file
 
 you can also use this comand line
 
