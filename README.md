@@ -280,6 +280,9 @@ srun gmx_mpi mdrun -pin on -cpi -noappend -s prod.tpr
 sbatch prod.sh
 ```
 
+### Analysis
+
+[MDAnalysis](https://www.mdanalysis.org/)
 
 ## References to start with MD simulations
 
