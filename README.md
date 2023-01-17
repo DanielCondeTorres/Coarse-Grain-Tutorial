@@ -1,5 +1,5 @@
 #  Training school from eCOST: Coarse-Grain Tutorial
-This is a short tutorial on how to perform a peptide-membrane interaction simulation using the Martini force field, together with the Gromacs package.
+This is a short tutorial on how to perform a peptide-membrane interaction simulation using the [Martini](http://www.cgmartini.nl/) force field, together with the [Gromacs](https://www.gromacs.org/) package.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/117435891/199940424-2ad7347e-bbcb-4425-bfc6-bb7a3fca7413.gif" alt="animated"  />
@@ -94,7 +94,7 @@ module load vmd
 
 In this case the representation to be used will be Coarse-Grained, where instead of representing all the atoms in an explicit way we group them in a structure called 'bead' that groups four of these atoms. This way we reduce the number of particles in the system and we can perform computational simulations of larger systems because the computational cost is lower.
 
-To begin with we will use the [Martini] (http://www.cgmartini.nl/force) field, as it allows us to perform this type of simulations, our membrane is already in CG resolution, to transform the peptide (atomistic resolution) to CG we can use the python script provided in Martini's own web page: **martinize.py**
+To begin with we will use the [Martini] (http://www.cgmartini.nl/) force field, as it allows us to perform this type of simulations, our membrane is already in CG resolution, to transform the peptide (atomistic resolution) to CG we can use the python script provided in Martini's own web page: **martinize.py**
 
 
 ```
