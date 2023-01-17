@@ -235,11 +235,14 @@ We need to create these groups in order to run the .mdp files, because it is goi
 gmx make_ndx -f minimize.gro -o index.ndx
 ```
 
-POPE and POPG
-
+ We are going to create a Membrane index: POPE and POPG are the lipids:
 ```
 2|3
 name 17 Membrane
+```
+And now, the solvent, therefore: Water and ions
+
+```
 4|5
 name 18 Water_and_ions
 ```
@@ -346,8 +349,9 @@ xmgrace -nxy  RDF_water.xvg
   <img src="https://user-images.githubusercontent.com/117435891/212896892-f0809dfb-aa93-484f-ba9f-f9ee2bb9a7d8.jpeg" />
 </p>
 
+[Gromac analysis](https://manual.gromacs.org/documentation/2019/reference-manual/analysis.html) allows you to do a wide variety of analyses, however, we recommend (if you have some notions in Python) the [MDAnalysis](https://www.mdanalysis.org/) module and give free rein to your imagination to study your system.
 
-[Gromac analysis](https://manual.gromacs.org/documentation/2019/reference-manual/analysis.html)  [MDAnalysis](https://www.mdanalysis.org/)
+
 
 ## References to start with MD simulations
 
