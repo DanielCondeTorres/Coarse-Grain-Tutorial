@@ -5,8 +5,11 @@ This is a short tutorial on how to perform a peptide-membrane interaction simula
   <img src="https://user-images.githubusercontent.com/117435891/199940424-2ad7347e-bbcb-4425-bfc6-bb7a3fca7413.gif" alt="animated"  />
 </p>
 
+## Some Theory
 
-## Getting started
+
+
+## Getting started: Simulation
 The first step is to create our simulation box, which will have the following study system:
 
 - Membrane simulating: bacteria (90% POPG and 10% POPE).
@@ -15,7 +18,7 @@ The first step is to create our simulation box, which will have the following st
 The membrane can be created directly with the free software [Charmm-gui](https://www.charmm-gui.org/), all you need to do is register. However, to save time I have moved the work forward and we will be able to download it directly from this repository at the following link:
 
 Magainin-2 will obtain its atomistic representation from the [Protein Data Bank](https://www.rcsb.org/structure/2MAG), if someone is lost, you can get the pdb directly from this repository.
-## Load modules that are needed to run and visualize the simulation
+### Load modules that are needed to run and visualize the simulation
 In order to use [Gromacs package](https://www.gromacs.org/) 
 
 ```
@@ -26,7 +29,7 @@ and in order to visualize the systems we will use [VMD](https://www.ks.uiuc.edu/
 ```
 module load vmd
 ```
-## Atomistic to Coarse-Grain resolution
+### Atomistic to Coarse-Grain resolution
 
 In this case the representation to be used will be Coarse-Grained, where instead of representing all the atoms in an explicit way we group them in a structure called 'bead' that groups four of these atoms. This way we reduce the number of particles in the system and we can perform computational simulations of larger systems because the computational cost is lower.
 
@@ -64,7 +67,7 @@ Protein_A        1
  1. "martini.itp": parameters and equations that describes our forcefield
  2. "Protein_A.itp": angles, distances, dihedrals... parameters that define our particle 
  
-# Solvating the membrane (not used in this tutorial)
+### Solvating the membrane (not used in this tutorial)
 In case we have the membrane without any type of solvent and we want to add it, it can be used:
 
 ```
@@ -128,7 +131,7 @@ POPG 225
 
  * means things that we need to modify in system.top
 
-## Add ions
+### Add ions
 
  *Since life does not exist at a net charge, we must add ions to our system.* **See references**
 
@@ -148,7 +151,7 @@ Group 4: W
 ```
 **W** means Water
 
-## Minimization
+### Minimization
 
 *The purpose of minimization, or relaxation, is to find a local energy minimum of the starting structure so that the molecular dynamics simulation does not immediately “blow up” (i.e. the forces on any one atom are not so large that the atoms move an unreasonable distance in a single timestep). This involves standard minimization algorithms such as steepest descent.* **See references**
 
@@ -163,7 +166,7 @@ gmx grompp -f minimization.mdp -c complete_system_ions.gro  -p system.top -o min
 gmx mdrun -v -deffnm minimize
 ```
 
-## Make index
+### Make index
 
 We need to create these groups in order to run the .mdp files, because it is going to apply some condictions to the membrane, water, ions and the ETP. When you create the pdbs, you haven't got these groups (you have Cl, Na, POPC ...) but not membrane, ions, etc.
 
@@ -180,7 +183,7 @@ name 17 Membrane
 name 18 Water_and_ions
 ```
 
-## Equilibration
+### Equilibration
 
 *Ultimately, we usually seek to run a simulation in a particular thermodynamic ensemble (e.g. the NVE or NVT ensemble) at a particular state point (e.g. target energy, temperature, and pressure) and collect data for analysis which is appropriate for those conditions and not biased depending on our starting conditions/configuration. This means that usually we need to invest simulation time in bringing the system to the appropriate state point as well as relaxing away from any artificially induced metastable starting states. In other words, we are usually interested in sampling the most relevant (or most probable) configurations in the equilibrium ensemble of interest. However, if we start in a less-stable configuration a large part of our equilibration may be the relaxation time (this may be very long for biomolecules or systems at phase equilibrium) necessary to reach the more relevant configuration space.*
 **See references**
@@ -194,7 +197,7 @@ gmx grompp -f equilibration.mdp -c minimize.gro -r minimize.gro -p system.top -o
 gmx mdrun -v -deffnm equilibrate
 ```
 
-# Production
+### Production
 *Once equilibration is complete, we may begin collecting data for analysis. Typically this phase is called “production”. The main difference between equilibration and production is simply that in the production simulation, we plan to retain and analyze the collected data. Production must always be preceded by equilibration appropriate for the target production ensemble, and production data should never be collected immediately after a change in conditions (such as rescaling a box size, energy minimizing, or suddenly changing the temperature or pressure) except in very specific applications where this is the goal.* **See references**
 
 ```
