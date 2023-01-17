@@ -292,7 +292,10 @@ sbatch prod.sh
 
 ### Analysis
 
-We can modify the index
+Once we go into production, we can study quantitatively how our system behaves, in this section we will present some simple analyses that can be performed directly with GROMACS.
+
+First, we can modify the index and prepare it for the analysis.
+For the analysis will be also useful have the protein backbone and a unique water molecule.
 
 ```
 gmx make_ndx -f minimize.gro -n index.ndx -o index.ndx
@@ -301,9 +304,7 @@ a BB
 q
 ```
 
-For the analysis will be also useful have the backbone
-Where BB is the Backbone of the Protein and 6029 is a unique water molecule, they will be used to calculate the Radial Distribution Function.
-
+Where BB is the Backbone of the Protein and 6029 is a unique water molecule, they will be used to calculate the number of contacts and the Radial Distribution Function, respectively.
 
 #### Density profiles
 
