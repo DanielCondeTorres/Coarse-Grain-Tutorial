@@ -243,6 +243,13 @@ name 17 Membrane
 4|5
 name 18 Water_and_ions
 ```
+For the analysis will be also useful have the backbone
+
+
+```
+a BB
+q
+```
 
 ### Equilibration
 
