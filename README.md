@@ -305,3 +305,7 @@ sbatch prod.sh
 To **eCOST Action CA21145 EURESTOP
 European Network for diagnosis and treatment of antibiotic-resistant
 bacterial infections** for counting on us to give this class.
+
+## Team
+
+Daniel Conde-Torres, Alejandro Seco, Fabián Suárez-Lestón, Alfonso Cabezón, Alexandre Blanco, Paula Antelo, Ángel Piñeiro y Rebeca García Fandiño 
