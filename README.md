@@ -364,10 +364,11 @@ The molecules that form this first solvation layer define a space that is inacce
 
 
 
+Finally, I want to point out, that this analysis is also useful to study for example the formation of hydrogen bonds of an amino acid with water molecules of the solvent, as I indicate in the following image, although this analysis would be more useful at an atomistic resolution..., but it serves to clarify the analysis!
 
-
-
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/213033232-cd1af596-c265-43f1-b425-5934b77d24b4.PNG" />
+</p>
 
 
 
