@@ -347,7 +347,7 @@ xmgrace -nxy  num_contacts_skip.xvg
 </p>
 
 #### Radial distribution function
-The following is another typical analysis that students of the Master in Atomistic and Computational Modelling of the UB do when they create their own force field and cry when trying to parallelise it, this is the radial distribution function, which to begin with, depending on the behaviour of the graph we can know if our system is a [solid, liquid or gaseous state] (https://commons.wikimedia.org/wiki/File:Simulated_Radial_Distribution_Functions_for_Solid,_Liquid,_and_Gaseous_Argon.svg)
+The following is another typical analysis that students of the Master in Atomistic and Computational Modelling of the UB do when they create their own force field and cry when trying to parallelise it, this is the radial distribution function, which to begin with, depending on the behaviour of the graph we can know if our system is a [solid, liquid or gaseous state](https://commons.wikimedia.org/wiki/File:Simulated_Radial_Distribution_Functions_for_Solid,_Liquid,_and_Gaseous_Argon.svg)
 
 ```
 gmx rdf -f trajectory_skip100.xtc -s prod.tpr -o RDF_water.xvg -n index.ndx -tu ns
