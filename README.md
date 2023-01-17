@@ -314,6 +314,7 @@ Where BB is the Backbone of the Protein and 6029 is a unique water molecule, the
 #### Density profiles
 
 
+In this first analysis, we will calculate the density of the different components of our system: water and ions (or only water), membrane and protein, we can observe that the value of water is compatible with the theoretical one, at the same time we can observe the density of our lipidic membrane (we can estimate the thickness of the membrane over 4 nm), we also highlight that the ETP is in a stable situation (see the video of the production), resting on the surface of the membrane.
 
 ```
 gmx density -f trajectory_skip100.xtc -s prod.tpr -n index.ndx -center -symm -ng 3 -o density_skip.xvg
@@ -332,6 +333,7 @@ xmgrace -nxy  density_skip.xvg
 
 #### Number of contacts
 
+ 
 ```
 gmx mindist -s prod.tpr -f trajectory_skip100.xtc -on num_contacts_skip.xvg -tu ns -d 0.6 -n index.ndx
 Select BB
