@@ -347,7 +347,7 @@ xmgrace -nxy  num_contacts_skip.xvg
 </p>
 
 #### Radial distribution function
-
+The following is another typical analysis that students of the Master in Atomistic and Computational Modelling of the UB do when they create their own force field and cry when trying to parallelise it, this is the radial distribution function, which to begin with, depending on the behaviour of the graph we can know if our system is a [solid, liquid or gaseous state] (https://commons.wikimedia.org/wiki/File:Simulated_Radial_Distribution_Functions_for_Solid,_Liquid,_and_Gaseous_Argon.svg)
 
 ```
 gmx rdf -f trajectory_skip100.xtc -s prod.tpr -o RDF_water.xvg -n index.ndx -tu ns
@@ -359,6 +359,19 @@ xmgrace -nxy  RDF_water.xvg
 <p align="center">
   <img src="https://user-images.githubusercontent.com/117435891/212896892-f0809dfb-aa93-484f-ba9f-f9ee2bb9a7d8.jpeg" />
 </p>
+
+The molecules that form this first solvation layer define a space that is inaccessible to other molecules and therefore when we go to greater distances from our central molecule, the number of molecules rapidly decreases and the radial distribution function drops. It then increases until it reaches the second solvation layer of our molecule (and which would form part of the first solvation layer of those molecules). Again, we would have a decrease of the distribution function at larger distances and a new peak. Our reference is located in the central molecule and therefore we can consider it as at rest, but the rest of the molecules are constantly moving. The disordering effect of molecular motion is amplified as we move away from the central molecule (the first layer moves,  the second layer moves relative to the first, and so on), and so for sufficiently large distances, the radial distribution function takes on a uniform value. This same molecular motion explains why the distribution function does not cancel out between the first and second solvation layers. It must be considered that there are configurations in which molecules in the first layer may be moving away from the second layer. That is to say, the probability of finding molecules at that distances is not zero due to the exchange of molecules between the solvation layers.
+
+
+
+
+
+
+
+
+
+
+
 
 [Gromacs analysis](https://manual.gromacs.org/documentation/2019/reference-manual/analysis.html) allows you to do a wide variety of analyses, however, we recommend (if you have some notions in Python) the [MDAnalysis](https://www.mdanalysis.org/) module and give free rein to your imagination to study your system.
 
