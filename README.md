@@ -6,19 +6,23 @@ This is a short tutorial on how to perform a peptide-membrane interaction simula
 </p>
 
 ## Some Theory
+
 ### What are computer simulations?
+
 - It is a tool to investigate many particle systems
 - It is a quantitave science consist of interplay between experiment and theory
 - Useful, because only a few very simplified problems can be solved analytically
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/212854665-5beaa3aa-bf63-4aa2-9240-f9996f497ffe.gif" alt="animated"  />
-</p>
+
+
 ### Use computer simulations
+
 - Test models to understand and interpret experimental results
 - Test approximate analytical theories
 - Explore new regimes hard to reach in experiment
 - With a validated model, simulations can be used as 'microscopes' to unveil microscopic mechanisms responsible for certain phenomena
+
 ### Types of computer simulations
+
 - **Monte Carlo simulations:** use the knowledge of the hamiltonian and
 specific algorithms to appropriately sample the equilibrium microstates
 (positions and velocities) of a modeled system. From that sampling we
@@ -30,6 +34,14 @@ conditions. **a)** It provides the trajectory (position and velocity as a functi
 all the particles in the system. From those, observable quantities can be
 computed to compare with experiment.**b** Can be used to investigate equilibrium (ergodic assumption) and nonequilibrium
 phenomena: *The time average of a magnitude equals the average of that magnitude over the microstates of the same macrostate*
+
+### Limitations of classical Molecular Dynamics simulations
+
+### PBC
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/212854665-5beaa3aa-bf63-4aa2-9240-f9996f497ffe.gif" alt="animated"  />
+</p>
 
 ## Getting started: Simulation
 The first step is to create our simulation box, which will have the following study system:
