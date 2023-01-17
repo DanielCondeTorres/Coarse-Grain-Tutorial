@@ -7,7 +7,9 @@ This is a short tutorial on how to perform a peptide-membrane interaction simula
 
 ## Some Theory
 
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/212854665-5beaa3aa-bf63-4aa2-9240-f9996f497ffe.gif" alt="animated"  />
+</p>
 
 ## Getting started: Simulation
 The first step is to create our simulation box, which will have the following study system:
@@ -19,9 +21,13 @@ The membrane can be created directly with the free software [Charmm-gui](https:/
 
 Magainin-2 will obtain its atomistic representation from the [Protein Data Bank](https://www.rcsb.org/structure/2MAG), if someone is lost, you can get the pdb directly from this repository.
 ### Load modules that are needed to run and visualize the simulation
+
+
 In order to use [Gromacs package](https://www.gromacs.org/) 
 
 ```
+compute -c 16 --mem 32 --gpu
+export OMP_NUM_THREADS=4
 module load cesga/2020 gcc/system openmpi/4.0.5_ft3 gromacs/2021.5
 ```
 and in order to visualize the systems we will use [VMD](https://www.ks.uiuc.edu/Research/vmd/):
@@ -163,7 +169,7 @@ gmx grompp -f minimization.mdp -c complete_system_ions.gro  -p system.top -o min
 
 
 ```
-gmx mdrun -v -deffnm minimize
+gmx mdrun -v -deffnm minimize -ntomp 4 -ntmpi 4
 ```
 
 ### Make index
@@ -194,7 +200,7 @@ gmx grompp -f equilibration.mdp -c minimize.gro -r minimize.gro -p system.top -o
 ```
 
 ```
-gmx mdrun -v -deffnm equilibrate
+gmx mdrun -v -deffnm equilibrate -ntomp 4 -ntmpi 4
 ```
 
 ### Production
