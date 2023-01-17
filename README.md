@@ -284,12 +284,12 @@ sbatch prod.sh
 
 
 <p align="center">
-  <img src="" alt="animated"  />
+  <img src="https://user-images.githubusercontent.com/117435891/212883913-1ea1135e-fead-4bf0-968a-319cd8d7caff.gif" alt="animated"  />
 </p>
 
 ### Analysis
 
-[MDAnalysis](https://www.mdanalysis.org/)
+[Gromac analysis](https://manual.gromacs.org/documentation/2019/reference-manual/analysis.html)  [MDAnalysis](https://www.mdanalysis.org/)
 
 ## References to start with MD simulations
 
