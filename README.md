@@ -243,15 +243,7 @@ name 17 Membrane
 4|5
 name 18 Water_and_ions
 ```
-For the analysis will be also useful have the backbone
 
-
-```
-a 6029
-a BB
-q
-```
-Where BB is the Backbone of the Protein and 6029 is a unique water molecule, they will be used to calculate the Radial Distribution Function.
 ### Equilibration
 
 *Ultimately, we usually seek to run a simulation in a particular thermodynamic ensemble (e.g. the NVE or NVT ensemble) at a particular state point (e.g. target energy, temperature, and pressure) and collect data for analysis which is appropriate for those conditions and not biased depending on our starting conditions/configuration. This means that usually we need to invest simulation time in bringing the system to the appropriate state point as well as relaxing away from any artificially induced metastable starting states. In other words, we are usually interested in sampling the most relevant (or most probable) configurations in the equilibrium ensemble of interest. However, if we start in a less-stable configuration a large part of our equilibration may be the relaxation time (this may be very long for biomolecules or systems at phase equilibrium) necessary to reach the more relevant configuration space.*
@@ -297,6 +289,17 @@ sbatch prod.sh
 
 ### Analysis
 
+We can modify the index
+
+```
+gmx make_ndx -f minimize.gro -n index.ndx -o index.ndx
+a 6029
+a BB
+q
+```
+
+For the analysis will be also useful have the backbone
+Where BB is the Backbone of the Protein and 6029 is a unique water molecule, they will be used to calculate the Radial Distribution Function.
 
 
 #### Density profiles
