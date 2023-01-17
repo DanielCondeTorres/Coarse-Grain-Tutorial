@@ -350,7 +350,7 @@ xmgrace -nxy  RDF_water.xvg
   <img src="https://user-images.githubusercontent.com/117435891/212896892-f0809dfb-aa93-484f-ba9f-f9ee2bb9a7d8.jpeg" />
 </p>
 
-[Gromac analysis](https://manual.gromacs.org/documentation/2019/reference-manual/analysis.html) allows you to do a wide variety of analyses, however, we recommend (if you have some notions in Python) the [MDAnalysis](https://www.mdanalysis.org/) module and give free rein to your imagination to study your system.
+[Gromacs analysis](https://manual.gromacs.org/documentation/2019/reference-manual/analysis.html) allows you to do a wide variety of analyses, however, we recommend (if you have some notions in Python) the [MDAnalysis](https://www.mdanalysis.org/) module and give free rein to your imagination to study your system.
 
 
 
