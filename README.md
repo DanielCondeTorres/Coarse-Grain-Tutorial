@@ -280,6 +280,13 @@ srun gmx_mpi mdrun -pin on -cpi -noappend -s prod.tpr
 sbatch prod.sh
 ```
 
+
+
+
+<p align="center">
+  <img src="" alt="animated"  />
+</p>
+
 ### Analysis
 
 [MDAnalysis](https://www.mdanalysis.org/)
