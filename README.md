@@ -333,6 +333,7 @@ xmgrace -nxy  density_skip.xvg
 
 #### Number of contacts
 
+Next, the number of contacts exerted by the beads of the ETP backbone with the membrane has been calculated (using a radius to estimate the contact of 0.6 nm, a typical value for GC simulations) and a total value of approximately 55 contacts with the membrane has been found (Magainin-2 has 23 amino acids = 23 BB beads, and it can be observed that there are beads with more than a single contact). 
  
 ```
 gmx mindist -s prod.tpr -f trajectory_skip100.xtc -on num_contacts_skip.xvg -tu ns -d 0.6 -n index.ndx
