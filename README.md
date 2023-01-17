@@ -290,6 +290,8 @@ sbatch prod.sh
   <img src="https://user-images.githubusercontent.com/117435891/212883913-1ea1135e-fead-4bf0-968a-319cd8d7caff.gif" alt="animated"  />
 </p>
 
+#### .mdp files
+
 ### Analysis
 
 Once we go into production, we can study quantitatively how our system behaves, in this section we will present some simple analyses that can be performed directly with GROMACS.
