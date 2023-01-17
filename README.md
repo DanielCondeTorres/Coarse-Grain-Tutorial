@@ -292,6 +292,9 @@ sbatch prod.sh
 
 #### .mdp files
 
+During the creation of the system, we have used at different points files known as . mdp files, these allow us for example which type of algorithms we want to use to find the minimum, during minimisation (such as steepest descent), which type of ensemble production to work on, such as the NVE, NVT or NPT, thus choosing the thermostat, barostat, reference temperatures, the integrator to use to solve the equations of motion, the time step (how often we 'integrate' the equations of motion) or the method to calculate the long range electrostatics such as Ewald, the time step (how often we 'integrate' the equations of motion) or the method to calculate the Long range electrostatics such as Ewald Summation, PME or Reaction-Field, add constraints to the motion of our particles, perform Umbrella-Sampling simulations or how often we check-point our simulation.
+
+
 ### Analysis
 
 Once we go into production, we can study quantitatively how our system behaves, in this section we will present some simple analyses that can be performed directly with GROMACS.
