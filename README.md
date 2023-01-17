@@ -38,7 +38,7 @@ phenomena: *The time average of a magnitude equals the average of that magnitude
 ### Limitations of classical Molecular Dynamics simulations
 
 - Validity of classical forces and equations if typical distance between particles  is bigger than the De Broglie wavelength
-- Validity if intermolecular interactions?
+- Validity of intermolecular interactions?
 - Limited timescales reachable by current computational capabilities
 - Limited size of system by current computational capabilities
 - Ergodicity: is the simulated system exploring a relevant fraction of phase space?
