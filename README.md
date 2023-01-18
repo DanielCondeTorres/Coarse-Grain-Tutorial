@@ -120,6 +120,7 @@ The number of **H** should be the same (or higher) than the BB residues of our E
 - -x: is the CG structure
 - -merge: Merge chains
 - -topol.top: defines our system, the files that we are going to use and also the molecules of our system:
+- -nt: allows us to model the peptide in its non-zwiterionic form
  ```
 #include "martini.itp"
 #include "Protein_A.itp"
