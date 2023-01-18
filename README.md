@@ -310,6 +310,8 @@ For the analysis will be also useful have the protein backbone and a unique wate
 
 ```
 gmx make_ndx -f minimize.gro -n index.ndx -o index.ndx
+```
+```
 a 6029
 a BB
 q
@@ -324,10 +326,14 @@ In this first analysis, we will calculate the density of the different component
 
 ```
 gmx density -f trajectory_skip100.xtc -s prod.tpr -n index.ndx -center -ng 3 -o density_skip.xvg
+```
+```
 Select Membrane to center the representation
 Select Protein
 Select Membrane
 Select Water_and_ions
+```
+```
 xmgrace -nxy  density_skip.xvg
 ```
 
@@ -343,8 +349,12 @@ Next, the number of contacts exerted by the beads of the ETP backbone with the m
  
 ```
 gmx mindist -s prod.tpr -f trajectory_skip100.xtc -on num_contacts_skip.xvg -tu ns -d 0.6 -n index.ndx
+```
+```
 Select BB
 Select Membrane
+```
+```
 xmgrace -nxy  num_contacts_skip.xvg
 ```
 
@@ -357,8 +367,12 @@ The following is another typical analysis that students of the Master in Atomist
 
 ```
 gmx rdf -f trajectory_skip100.xtc -s prod.tpr -o RDF_water.xvg -n index.ndx -tu ns
+```
+```
 Select 6029
 Select W 
+```
+```
 xmgrace -nxy  RDF_water.xvg
 ```
 
