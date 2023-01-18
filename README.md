@@ -96,7 +96,7 @@ In this case the representation to be used will be Coarse-Grained, where instead
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/213305149-3053d485-64d8-489e-8a36-b45a574635df.PNG" />
+  <img src="https://user-images.githubusercontent.com/117435891/213305970-9747cea5-a7ca-485e-a203-1564fb6b0b6c.PNG" />
 </p>
 
 To begin with we will use the [Martini] (http://www.cgmartini.nl/) force field, as it allows us to perform this type of simulations, our membrane is already in CG resolution, to transform the peptide (atomistic resolution) to CG we can use the python script provided in Martini's own web page: **martinize.py**
