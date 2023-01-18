@@ -94,6 +94,11 @@ module load vmd
 
 In this case the representation to be used will be Coarse-Grained, where instead of representing all the atoms in an explicit way we group them in a structure called 'bead' that groups four of these atoms. This way we reduce the number of particles in the system and we can perform computational simulations of larger systems because the computational cost is lower.
 
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/117435891/213305149-3053d485-64d8-489e-8a36-b45a574635df.PNG" />
+</p>
+
 To begin with we will use the [Martini] (http://www.cgmartini.nl/) force field, as it allows us to perform this type of simulations, our membrane is already in CG resolution, to transform the peptide (atomistic resolution) to CG we can use the python script provided in Martini's own web page: **martinize.py**
 
 
