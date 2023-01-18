@@ -317,7 +317,7 @@ Where BB is the Backbone of the Protein and 6029 is an unique water molecule, th
 In this first analysis, we will calculate the density of the different components of our system: water and ions (or only water), membrane and protein, we can observe that the value of water is compatible with the theoretical one, at the same time we can observe the density of our lipidic membrane (we can estimate the thickness of the membrane over 4 nm), we also highlight that the ETP is in a stable situation (see the video of the production), resting on the surface of the membrane.
 
 ```
-gmx density -f trajectory_skip100.xtc -s prod.tpr -n index.ndx -center -symm -ng 3 -o density_skip.xvg
+gmx density -f trajectory_skip100.xtc -s prod.tpr -n index.ndx -center -ng 3 -o density_skip.xvg
 Select Membrane to center the representation
 Select Protein
 Select Membrane
@@ -327,7 +327,7 @@ xmgrace -nxy  density_skip.xvg
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/212896743-49c7ca61-d036-46c0-8837-fcbee7a87ccb.jpeg" />
+  <img src="https://user-images.githubusercontent.com/117435891/213301714-215cc30a-0e57-456a-80e3-290585309f93.jpeg" />
 </p>
 
 
@@ -356,8 +356,10 @@ Select W
 xmgrace -nxy  RDF_water.xvg
 ```
 
+
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/117435891/212896892-f0809dfb-aa93-484f-ba9f-f9ee2bb9a7d8.jpeg" />
+  <img src="https://user-images.githubusercontent.com/117435891/213301608-1d8b46ba-4e89-4612-afa4-844726e93988.jpeg" />
 </p>
 
 The molecules that form this first solvation layer define a space that is inaccessible to other molecules and therefore when we go to greater distances from our central molecule, the number of molecules rapidly decreases and the radial distribution function drops. It then increases until it reaches the second solvation layer of our molecule (and which would form part of the first solvation layer of those molecules). Again, we would have a decrease of the distribution function at larger distances and a new peak. Our reference is located in the central molecule and therefore we can consider it as at rest, but the rest of the molecules are constantly moving. The disordering effect of molecular motion is amplified as we move away from the central molecule (the first layer moves,  the second layer moves relative to the first, and so on), and so for sufficiently large distances, the radial distribution function takes on a uniform value. This same molecular motion explains why the distribution function does not cancel out between the first and second solvation layers. It must be considered that there are configurations in which molecules in the first layer may be moving away from the second layer. That is to say, the probability of finding molecules at that distances is not zero due to the exchange of molecules between the solvation layers.
