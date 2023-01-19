@@ -33,7 +33,7 @@ the particles in the system to give its temporal evolution given some initial
 conditions. **a)** It provides the trajectory (position and velocity as a function of time) of
 all the particles in the system. From those, observable quantities can be
 computed to compare with experiment. **b)** Can be used to investigate equilibrium (ergodic assumption) and nonequilibrium
-phenomena: *The time average of a magnitude equals the average of that magnitude over the microstates of the same macrostate*
+phenomena: *The time average of a magnitude equals the average of that magnitude over the [microstates of the same macrostate](https://es.wikipedia.org/wiki/Macroestado_y_microestado)*
 
 ### Limitations of classical Molecular Dynamics simulations
 
