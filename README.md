@@ -198,9 +198,9 @@ POPG 225
 
  * means things that we need to modify in system.top
 
-### Add ions
+### [Add ions](https://www.researchgate.net/post/Why_do_we_need_to_neutralize_the_charge_of_the_system_by_adding_ions_before_we_proceed_to_energy_minimization_step_in_GROMACS)
 
- *Since life does not exist at a net charge, we must add ions to our system.* **See references**
+ [*Since life does not exist at a net charge, we must add ions to our system.*](https://www.researchgate.net/publication/263952975_Quantifying_Artifacts_in_Ewald_Simulations_of_Inhomogeneous_Systems_with_a_Net_Charge) **See references**
 
 ```
 gmx grompp -f ions.mdp -c complete_system.pdb -p system.top -o ions.tpr
