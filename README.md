@@ -43,7 +43,7 @@ phenomena: *The time average of a magnitude equals the average of that magnitude
 - Limited size of system by current computational capabilities
 - Ergodicity: is the simulated system exploring a relevant fraction of phase space?
 
-### Periodic boundary conditions (Born, von Karman (1912), PBC)
+### [Periodic boundary conditions](https://www.compchems.com/molecular-dynamics-periodic-boundary-conditions-pbc/) (Born, von Karman (1912), PBC)
 
 To mimic realistic conditions (experiment), in simulations we usually want to describe bulk properties of substances; however, 
 due to limited computational power, there is limit in number of particles we can simulate; if walls, a large proportion will be affected by their presence
