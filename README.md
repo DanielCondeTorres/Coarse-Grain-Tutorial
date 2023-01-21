@@ -82,7 +82,11 @@ In order to use [Gromacs package](https://www.gromacs.org/)
 
 ```
 compute -c 16 --mem 32 --gpu
+```
+```
 export OMP_NUM_THREADS=4
+```
+```
 module load cesga/2020 gcc/system openmpi/4.0.5_ft3 gromacs/2021.5
 ```
 and in order to visualize the systems we will use [VMD](https://www.ks.uiuc.edu/Research/vmd/):
