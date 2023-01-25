@@ -432,3 +432,12 @@ I would also like to thank Martín Calvelo, for having taught me with so much pa
 ## Team
 
 Daniel Conde-Torres, Alejandro Seco, Fabián Suárez-Lestón, Alfonso Cabezón, Alexandre Blanco, Paula Antelo, Ángel Piñeiro y Rebeca García Fandiño 
+
+
+## Contact
+danielconde.torres@usc.es
+alejandro.seco.gonzalez@usc.es
+
+## Social
+@danicondeofisial
+@alexsg14
