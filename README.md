@@ -439,5 +439,15 @@ danielconde.torres@usc.es
 alejandro.seco.gonzalez@usc.es
 
 ## Social
+
+# LinkedIn
+
+[Daniel Conde-Torres](https://www.linkedin.com/in/daniel-conde-torres-4683b521a)
+
+[Alejandro](https://www.linkedin.com/in/alejandro-seco-gonzalez)
+
+# Instagram
+
 @danicondeofisial
+
 @alexsg14
