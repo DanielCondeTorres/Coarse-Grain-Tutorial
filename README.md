@@ -1,4 +1,4 @@
-#  Training school from eCOST: Coarse-Grain Tutorial
+#  Training school from eCOST: Coarse-Grained Tutorial
 This is a short tutorial on how to perform a peptide-membrane interaction simulation using the [Martini](http://www.cgmartini.nl/) force field, together with the [Gromacs](https://www.gromacs.org/) package.
 
 <p align="center">
@@ -234,7 +234,7 @@ gmx grompp -f minimization.mdp -c complete_system_ions.gro  -p system.top -o min
 
 
 ```
-gmx mdrun -v -deffnm minimize -ntomp 4 -ntmpi 4
+gmx_mpi mdrun -v -deffnm minimize 
 ```
 
 ### Make index
@@ -272,7 +272,7 @@ gmx grompp -f equilibration.mdp -c minimize.gro -r minimize.gro -p system.top -o
 ```
 
 ```
-gmx mdrun -v -deffnm equilibrate -ntomp 4 -ntmpi 4
+gmx_mpi mdrun -v -deffnm equilibrate
 ```
 
 ### Production
@@ -379,6 +379,7 @@ gmx rdf -f trajectory_skip100.xtc -s prod.tpr -o RDF_water.xvg -n index.ndx -tu 
 ```
 Select 6029
 Select W 
+Ctrl+D
 ```
 ```
 xmgrace -nxy  RDF_water.xvg
