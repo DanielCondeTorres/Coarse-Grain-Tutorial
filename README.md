@@ -172,7 +172,7 @@ you can also use this comand line
 
 
 ```
-grep -c W complete_system.pdb
+grep -wc W complete_system.pdb
 ```
 
 
