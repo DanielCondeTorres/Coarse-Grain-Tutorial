@@ -147,7 +147,11 @@ gmx solvate -cs water.gro -cp caja_grande.pdb -p system.top -scale 4 -o caja_gra
 
 Where the option 'scale 4' allows us not to add the water inside the membrane, but some script can be used to eliminate it.
 
+If we need to create this box to solvate:
 
+```
+gmx insert-molecules -ci TFE.pdb  -nmol 1200 -box 5 5 5 -o chx_box.gro
+```
 
 
 
