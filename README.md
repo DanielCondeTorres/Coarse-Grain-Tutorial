@@ -413,6 +413,77 @@ Finally, I want to point out, that this analysis is also useful to study for exa
 
 
 
+## DSSP
+
+To create the pdbs
+
+```
+gmx trjconv -s prod_2.tpr  -f conc.xtc -dt 10  -sep -o trj.pdb 
+```
+
+```
+pydssp  trj* -o output.result
+```
+If you have other things than aminoacids... you should go to pdbbio.py:
+
+```
+import numpy as np
+
+atomnum = {' N  ':0, ' CA ': 1, ' C  ': 2, ' O  ': 3}
+
+def read_pdbtext_no_checking(pdbstring: str):
+    lines = pdbstring.split("\n")
+    coords, atoms, resid_old = [], None, None
+    for l in lines:
+        if l.startswith('ATOM'):
+            iatom = atomnum.get(l[12:16], None)
+            resid = l[21:26]
+            if resid != resid_old:
+                if atoms is not None:
+                    coords.append(atoms)
+                atoms, resid_old = [], resid
+            if iatom is not None:
+                xyz = [float(l[30:38]), float(l[38:46]), float(l[46:54])]
+                atoms.append(xyz)
+    if atoms is not None:
+        coords.append(atoms)
+    coords = np.array(coords)
+    return coords
+
+
+def read_pdbtext_with_checking(pdbstring: str):
+    lines = pdbstring.split("\n");a=pdbstring.strip()
+    coords, atoms, resid_old, check = [], None, None, []
+    for l in lines:
+        if l[17:20]=='ACE' or l[17:20]=='NH2':#Things that we dont want
+            print('Dont use: ',l[17:20])       
+        elif l.startswith('ATOM'):
+            iatom = atomnum.get(l[12:16], None)
+            resid = l[21:26]
+            if resid != resid_old:
+                if atoms is not None:
+                    coords.append(atoms)
+                    check.append(atom_check)
+                atoms, resid_old, atom_check = [], resid, []
+            if iatom is not None:
+                xyz = [float(l[30:38]), float(l[38:46]), float(l[46:54])]
+                atoms.append(xyz)
+                atom_check.append(iatom)
+    if atoms is not None:
+        coords.append(atoms)
+        check.append(atom_check)
+    coords = np.array(coords)
+    # check
+    assert len(coords.shape) == 3, "Some required atoms [N,CA,C,O] are missing in the input PDB file"
+    check = np.array(check)
+    assert np.all(check[:,0]==0), "Order of PDB line may be broken. It's required to be N->CA->C->O w/o any duplicate or lack"
+    assert np.all(check[:,1]==1), "Order of PDB line may be broken. It's required to be N->CA->C->O w/o any duplicate or lack"
+    assert np.all(check[:,2]==2), "Order of PDB line may be broken. It's required to be N->CA->C->O w/o any duplicate or lack"
+    assert np.all(check[:,3]==3), "Order of PDB line may be broken. It's required to be N->CA->C->O w/o any duplicate or lack"
+    # output
+    return coords
+```
+
 ## References to start with MD simulations
 
 [Braun E, Gilmer J, Mayes HB, Mobley DL, Monroe JI, Prasad S, Zuckerman DM. Best Practices for Foundations in Molecular Simulations [Article v1.0]. Living J Comput Mol Sci. 2019;1(1):5957. doi: 10.33011/livecoms.1.1.5957. Epub 2018 Nov 29. PMID: 31788666; PMCID: PMC6884151](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884151/)
