@@ -418,7 +418,7 @@ Finally, I want to point out, that this analysis is also useful to study for exa
 To create the pdbs
 
 ```
-gmx trjconv -s prod_2.tpr  -f conc.xtc -dt 10  -sep -o trj.pdb 
+gmx trjconv -s prod_2.tpr  -f conc.xtc -dt 10 -sep -o traj_.pdb
 ```
 
 ```
@@ -483,6 +483,66 @@ def read_pdbtext_with_checking(pdbstring: str):
     # output
     return coords
 ```
+
+The script to representate this:
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+archivo=open('output.result')
+file=archivo.readlines()
+H_count=[]
+E_count=[]
+tiempo=[]
+for lines in file:
+    secondary_structure=lines.split()#leemos las lineas de estructura secundaria
+    len_ss=len(secondary_structure[0])#longitud de aminoacidos
+    H=0;E=0 #En cada linea establecemos el contador de ss igual a 0
+    for elemento in secondary_structure[0]:#contamos la cantidad de elemento por tipo
+        if elemento=='H':#alpha helix
+            H=H+1     
+        elif elemento=='E':#lamina beta
+            E=E+1
+    E_count.append(E)
+    H_count.append(H/len_ss*100)
+    
+
+    lista=[0,1,2,3,4,5,6,7,8,9]
+    #count the time
+    convertir_numero=[]
+    for elemento in secondary_structure[1]:
+    #    print(elemento)
+        try:
+            if float(elemento) in lista:
+     #           print('Numeros: ',elemento)
+                convertir_numero.append(elemento)
+            else:
+                pass
+        except ValueError:
+            pass
+    tiempo.append(int(''.join(map(str, convertir_numero))))
+   # print('wwwwwwwwwwwwwww',int(''.join(map(str, convertir_numero))))
+
+#Ordenamos las listas:
+# Creamos una lista de tuplas combinando ambas listas
+combinadas = list(zip(tiempo, H_count))
+
+# Ordenamos la lista de tuplas utilizando la lista 1 como clave
+combinadas.sort(key=lambda x: x[0])
+# Extraemos las listas ordenadas resultantes
+tiempo_ordenada, H_count_ordenada = zip(*combinadas)
+
+
+import matplotlib as mpl
+plt.plot(tiempo_ordenada,H_count_ordenada)
+plt.ylabel(r'%$\mathbf{(\alpha)-helix}$', fontsize=24)
+plt.xlabel(r'$\mathbf{Time (ps)}$', fontsize=24)
+plt.xticks(fontsize=22)
+plt.yticks(fontsize=22)
+plt.show()
+plt.close()
+```
+
 
 ## References to start with MD simulations
 
