@@ -422,7 +422,7 @@ gmx trjconv -s prod_2.tpr  -f conc.xtc -dt 10 -sep -o traj_.pdb
 ```
 
 ```
-pydssp  trj* -o output.result
+pydssp  traj* -o output.result
 ```
 If you have other things than aminoacids... you should go to pdbbio.py:
 
