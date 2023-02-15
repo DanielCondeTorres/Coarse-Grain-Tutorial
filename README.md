@@ -533,10 +533,21 @@ combinadas.sort(key=lambda x: x[0])
 tiempo_ordenada, H_count_ordenada = zip(*combinadas)
 
 
+#vemos relación_frames_tiempo
+buscar_relacion_tiempo_frame=open('traj_1.pdb')
+#pdb=buscar_relacion_tiempo_frame.readline()
+buscar_relacion_tiempo_frame.readline()
+pdb=buscar_relacion_tiempo_frame.readline()
+factor=float(pdb.split()[5])
+
+
+'''for line in pdb:
+    print(line.split()[3])'''
 import matplotlib as mpl
-plt.plot(tiempo_ordenada,H_count_ordenada)
+print(tiempo_ordenada[-1])
+plt.plot(np.array(tiempo_ordenada)*factor/1000,H_count_ordenada)
 plt.ylabel(r'%$\mathbf{(\alpha)-helix}$', fontsize=24)
-plt.xlabel(r'$\mathbf{Time (ps)}$', fontsize=24)
+plt.xlabel(r'$\mathbf{Time (ns)}$', fontsize=24)
 plt.xticks(fontsize=22)
 plt.yticks(fontsize=22)
 plt.show()
