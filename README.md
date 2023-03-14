@@ -219,7 +219,7 @@ POPG 225
   <img src="https://user-images.githubusercontent.com/117435891/212669021-89bb1ddd-68c3-499b-b64e-bf4189a1c377.png" />
 </p>
 
- $*$ means things that we need to modify in system.top
+ **$*$ means things that we need to modify in system.top**
 
 ### [Add ions](https://www.researchgate.net/post/Why_do_we_need_to_neutralize_the_charge_of_the_system_by_adding_ions_before_we_proceed_to_energy_minimization_step_in_GROMACS)
 
