@@ -123,8 +123,9 @@ The number of **H** should be the same (or higher) than the BB residues of our E
 9.  "C": "Coil", 
 - -x: is the CG structure
 - -merge: Merge chains
-- -topol.top: defines our system, the files that we are going to use and also the molecules of our system:
 - -nt: allows us to model the peptide in its non-zwiterionic form (in case you want the zwiterionic form, simply do not use the zwiterionic flag)
+- -topol.top: defines our system, the files that we are going to use and also the molecules of our system:
+ 
  ```
 #include "martini.itp"
 #include "Protein_A.itp"
@@ -137,8 +138,15 @@ Protein_A        1
  ```
  1. "martini.itp": parameters and equations that describes our forcefield
  2. "Protein_A.itp": angles, distances, dihedrals... parameters that define our particle 
+
+
+#### IMPORTANT NOTE:
+
+In this tutorial, the membrane has been obtained using the CHARMM-GUI software, which provides us with the .pdb of the membrane, the .itp and a system.top (analogous to topol.top) but with the files we need to define our membrane, the way to proceed would be to include the information of a .top (for example the topol.top) inside the other topology file (system.top), thus grouping all the information in a single file, this is what we will do in the section: **Modifying the topology file.**
+
+
  
-### Solvating the membrane (not used in this tutorial)
+### Solvating the membrane (not used in this tutorial!!!!)
 In case we have the membrane without any type of solvent and we want to add it, it can be used:
 
 ```
@@ -159,7 +167,7 @@ gmx insert-molecules -ci TFE.pdb  -nmol 1200 -box 5 5 5 -o chx_box.gro
   <img src="https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png" />
 </p>
 
-## Insert the molecule in the membrane-water box
+### Insert the molecule in the membrane-water box
 
 In this case we want to insert one Magainin in the simulation box (-nmol 1) in the water solution, so we eliminate waters (W) in order to give space to our peptide
 
@@ -174,7 +182,7 @@ grep -wc W complete_system.pdb
 ```
 
 
-We add the protein, the correct number of waters and the protein itp file
+We add the protein, the correct number of waters and the protein.itp file
 
 you can also use this script
 
@@ -182,6 +190,7 @@ you can also use this script
 ```
 python number_of_waters.py -f complete_system.pdb
 ```
+#### Modifying the topology file.
 
 ```
 #include "martini_v2.2.itp"
