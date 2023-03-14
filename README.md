@@ -142,7 +142,7 @@ Protein_A        1
 
 #### IMPORTANT NOTE:
 
-In this tutorial, the membrane has been obtained using the CHARMM-GUI software, which provides us with the .pdb of the membrane, the .itp and a system.top (analogous to topol.top) but with the files we need to define our membrane, the way to proceed would be to include the information of a .top (for example the topol.top) inside the other topology file (system.top), thus grouping all the information in a single file, this is what we will do in the section: **Modifying the topology file.**
+In this tutorial, the membrane has been obtained using the CHARMM-GUI software, which provides us with the .pdb of the membrane, the .itp of the lipids and a system.top (analogous to topol.top) but with the files we need to define our membrane, the way to proceed would be to include the information of a .top (for example the topol.top) inside the other topology file (system.top), thus grouping all the information in a single file, this is what we will do in the section: **Modifying the topology file.**
 
 
  
