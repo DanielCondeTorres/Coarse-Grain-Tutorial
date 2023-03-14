@@ -139,10 +139,10 @@ Protein_A        1
  1. "martini.itp": parameters and equations that describes our forcefield
  2. "Protein_A.itp": angles, distances, dihedrals... parameters that define our particle 
 
+$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
 
-```diff
-- #### IMPORTANT NOTE:
-```
+#### IMPORTANT NOTE:
+
 
 In this tutorial, the membrane has been obtained using the CHARMM-GUI software, which provides us with the .pdb of the membrane, the .itp of the lipids and a system.top (analogous to topol.top) but with the files we need to define our membrane, the way to proceed would be to include the information of a .top (for example the topol.top) inside the other topology file (system.top), thus grouping all the information in a single file, this is what we will do in the section: **Modifying the topology file.**
 
