@@ -139,7 +139,7 @@ Protein_A        1
  1. "martini.itp": parameters and equations that describes our forcefield
  2. "Protein_A.itp": angles, distances, dihedrals... parameters that define our particle 
 
-$${\color{red} #### IMPORTANT NOTE:$$
+$${\color{red} #### IMPORTANT NOTE:}$$
 
 #### IMPORTANT NOTE:
 
