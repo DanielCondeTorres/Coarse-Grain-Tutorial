@@ -184,7 +184,7 @@ grep -wc W complete_system.pdb
 ```
 
 
-We add the protein, the correct number of waters and the protein.itp file to the topology file (system.top, because there are less things needed to add)
+We add the protein, the correct number of waters and the protein.itp file to the topology file (system.top; because there is less to add than on topol.top, so we will forget about the latter.)
 
 
 (To count the number of waters you can also use this script provided:)
