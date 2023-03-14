@@ -167,18 +167,21 @@ In this case we want to insert one Magainin in the simulation box (-nmol 1) in t
 gmx insert-molecules -f mem_bact_solvate_clean.pdb -ci MAG_CG.pdb -nmol 1 -replace W -o complete_system.pdb
 ```
 
-```
-python number_of_waters.py -f complete_system.pdb
-```
-We add the protein, the correct number of waters and the protein itp file
-
-you can also use this comand line
 
 
 ```
 grep -wc W complete_system.pdb
 ```
 
+
+We add the protein, the correct number of waters and the protein itp file
+
+you can also use this script
+
+
+```
+python number_of_waters.py -f complete_system.pdb
+```
 
 ```
 #include "martini_v2.2.itp"
