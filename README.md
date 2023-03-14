@@ -124,7 +124,7 @@ The number of **H** should be the same (or higher) than the BB residues of our E
 - -x: is the CG structure
 - -merge: Merge chains
 - -topol.top: defines our system, the files that we are going to use and also the molecules of our system:
-- -nt: allows us to model the peptide in its non-zwiterionic form
+- -nt: allows us to model the peptide in its non-zwiterionic form (in case you want the zwiterionic form, simply do not use the zwiterionic flag)
  ```
 #include "martini.itp"
 #include "Protein_A.itp"
@@ -421,6 +421,56 @@ Finally, I want to point out, that this analysis is also useful to study for exa
 
 
 
+## References to start with MD simulations
+
+[Braun E, Gilmer J, Mayes HB, Mobley DL, Monroe JI, Prasad S, Zuckerman DM. Best Practices for Foundations in Molecular Simulations [Article v1.0]. Living J Comput Mol Sci. 2019;1(1):5957. doi: 10.33011/livecoms.1.1.5957. Epub 2018 Nov 29. PMID: 31788666; PMCID: PMC6884151](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884151/)
+
+[Gromacs Tutorial](http://www.mdtutorials.com/gmx/lysozyme/01_pdb2gmx.html)
+
+## Importance of colors to make plots for everybody
+
+[ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=GnBu&n=5)
+
+## Acknowledgments
+
+To **eCOST Action CA21145 EURESTOP European Network for diagnosis and treatment of antibiotic-resistant bacterial infections** for counting on us to give this class.
+
+To **Cesga**, for allowing us the use of their facilities to hold this seminar.
+
+This work has received financial support from the Spanish Agencia Estatal de Investigación (AEI) and the European Regional Development Fund - ERDF (RTI2018-098795-A-I00, PID2019-111327GB-I00, PDC2022-133402-I00 and RYC-2016-20335), by the Xunta de Galicia (ED431B 2022/36, ED431F 2020/05, 06_IN606D_2021_2600276, 02_IN606D_2022_2667887, ED481A 2022/290 and Centro singular de investigación de Galicia accreditation 2019-2022, ED431G 2019/03) and the European Union (ERDF) and by the COST Action CA21145.
+
+I would also like to thank Martín Calvelo, for having taught me with so much patience how to perform my first Molecular Dynamics simulations.
+
+## Team
+
+Daniel Conde-Torres, Alejandro Seco, Fabián Suárez-Lestón, Alfonso Cabezón, Alexandre Blanco, Paula Antelo, Ángel Piñeiro y Rebeca García Fandiño 
+
+
+## Contact
+danielconde.torres@usc.es
+
+alejandro.seco.gonzalez@usc.es
+
+## Social
+
+### LinkedIn
+
+[Daniel Conde-Torres](https://www.linkedin.com/in/daniel-conde-torres-4683b521a)
+
+[Alejandro](https://www.linkedin.com/in/alejandro-seco-gonzalez)
+
+### Instagram
+
+@danicondeofisial
+
+@alexsg14
+
+
+
+
+
+## Esto parte se implementará en un futuro, pero es para el caso atomístico...
+
 ## DSSP
 
 To create the pdbs
@@ -563,46 +613,3 @@ plt.close()
 ```
 
 
-## References to start with MD simulations
-
-[Braun E, Gilmer J, Mayes HB, Mobley DL, Monroe JI, Prasad S, Zuckerman DM. Best Practices for Foundations in Molecular Simulations [Article v1.0]. Living J Comput Mol Sci. 2019;1(1):5957. doi: 10.33011/livecoms.1.1.5957. Epub 2018 Nov 29. PMID: 31788666; PMCID: PMC6884151](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6884151/)
-
-[Gromacs Tutorial](http://www.mdtutorials.com/gmx/lysozyme/01_pdb2gmx.html)
-
-## Importance of colors to make plots for everybody
-
-[ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=GnBu&n=5)
-
-## Acknowledgments
-
-To **eCOST Action CA21145 EURESTOP European Network for diagnosis and treatment of antibiotic-resistant bacterial infections** for counting on us to give this class.
-
-To **Cesga**, for allowing us the use of their facilities to hold this seminar.
-
-This work has received financial support from the Spanish Agencia Estatal de Investigación (AEI) and the European Regional Development Fund - ERDF (RTI2018-098795-A-I00, PID2019-111327GB-I00, PDC2022-133402-I00 and RYC-2016-20335), by the Xunta de Galicia (ED431B 2022/36, ED431F 2020/05, 06_IN606D_2021_2600276, 02_IN606D_2022_2667887, ED481A 2022/290 and Centro singular de investigación de Galicia accreditation 2019-2022, ED431G 2019/03) and the European Union (ERDF) and by the COST Action CA21145.
-
-I would also like to thank Martín Calvelo, for having taught me with so much patience how to perform my first Molecular Dynamics simulations.
-
-## Team
-
-Daniel Conde-Torres, Alejandro Seco, Fabián Suárez-Lestón, Alfonso Cabezón, Alexandre Blanco, Paula Antelo, Ángel Piñeiro y Rebeca García Fandiño 
-
-
-## Contact
-danielconde.torres@usc.es
-
-alejandro.seco.gonzalez@usc.es
-
-## Social
-
-### LinkedIn
-
-[Daniel Conde-Torres](https://www.linkedin.com/in/daniel-conde-torres-4683b521a)
-
-[Alejandro](https://www.linkedin.com/in/alejandro-seco-gonzalez)
-
-### Instagram
-
-@danicondeofisial
-
-@alexsg14
