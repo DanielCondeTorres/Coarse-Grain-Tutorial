@@ -146,7 +146,7 @@ In this tutorial, the membrane has been obtained using the CHARMM-GUI software, 
 
 
  
-### Solvating the membrane (not used in this tutorial!, go to: Insert the molecule in the membrane-water box)
+### Solvating the membrane (not used in this tutorial! go to: Insert the molecule in the membrane-water box)
 In case we have the membrane without any type of solvent and we want to add it, it can be used:
 
 ```
