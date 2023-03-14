@@ -142,11 +142,11 @@ Protein_A        1
 
 #### ${{\color{red}{Important\ Note}}}$
 
-In this tutorial, the membrane has been obtained using the CHARMM-GUI software, which provides us with the .pdb of the membrane, the .itp of the lipids and a system.top (analogous to topol.top) but with the files we need to define our membrane, the way to proceed would be to include the information of a .top (for example the topol.top) inside the other topology file (system.top), thus grouping all the information in a single file, this is what we will do in the section: **Modifying the topology file.**
+In this tutorial, the membrane has been obtained using the CHARMM-GUI software, which provides us with the .pdb of the membrane, the .itp of the lipids and a system.top (analogous to topol.top) but with the files we need to define our membrane, the way to proceed would be to include the information of a .top (for example the topol.top) inside the other topology file (system.top), thus grouping all the information in a single file, this is what we will do in the section: **Insert the molecule in the membrane-water box: Modifying the topology file.**
 
 
  
-### Solvating the membrane (not used in this tutorial!!!!)
+### Solvating the membrane (not used in this tutorial!, go to: Insert the molecule in the membrane-water box)
 In case we have the membrane without any type of solvent and we want to add it, it can be used:
 
 ```
@@ -166,6 +166,8 @@ gmx insert-molecules -ci TFE.pdb  -nmol 1200 -box 5 5 5 -o chx_box.gro
 <p align="center">
   <img src="https://user-images.githubusercontent.com/117435891/212669312-70e8a736-a19c-47f0-9426-004ce731e0c1.png" />
 </p>
+
+
 
 ### Insert the molecule in the membrane-water box
 
