@@ -184,12 +184,13 @@ grep -wc W complete_system.pdb
 
 We add the protein, the correct number of waters and the protein.itp file
 
-you can also use this script
+you can also use this script provided:
 
 
 ```
 python number_of_waters.py -f complete_system.pdb
 ```
+
 #### Modifying the topology file.
 
 ```
