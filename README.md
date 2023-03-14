@@ -123,7 +123,7 @@ The number of **H** should be the same (or higher) than the BB residues of our E
 9.  "C": "Coil", 
 - -x: is the CG structure
 - -merge: Merge chains
-- -nt: allows us to model the peptide in its non-zwiterionic form (in case you want the zwiterionic form, simply do not use the zwiterionic flag)
+- -nt: allows us to model the peptide in its non-zwiterionic form (in case you want the zwiterionic form, simply do not use the -nt flag)
 - -topol.top: defines our system, the files that we are going to use and also the molecules of our system:
  
  ```
