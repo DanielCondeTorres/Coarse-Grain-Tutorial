@@ -32,7 +32,7 @@ def main() :
     print ('ow:', (int(len(ow))))
     print ('hw1:', (int(len(hw1))))
     print ('hw2:', (int(len(hw2))))
-    print ('lipidos:', (int(len(p))))
+    #print ('lipidos:', (int(len(p))))
 
 if __name__=="__main__" :
     main()
