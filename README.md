@@ -1,4 +1,4 @@
-#  Training school from eCOST: Coarse-Grained Tutorial
+#  Training school from ComeInCell MSCA: Coarse-Grained Tutorial
 This is a short tutorial on how to perform a peptide-membrane interaction simulation using the [Martini](http://www.cgmartini.nl/) force field, together with the [Gromacs](https://www.gromacs.org/) package.
 
 <p align="center">
@@ -296,7 +296,7 @@ gmx_mpi mdrun -v -deffnm equilibrate
 If it did not load, it is due to a problem because of the iteractive session, so try the following command to run the equilibration.
 
 ```
-gmx mdrun -v -deffnm minimize -nt 16 -ntmpi 1
+gmx mdrun -v -deffnm equilibrate -nt 16 -ntmpi 1
 ```
 
 ### Production
